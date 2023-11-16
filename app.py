@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import psycopg2
+import os
 
 app = Flask(__name__)
 
@@ -12,8 +13,10 @@ db_params = {
 }
 
 # データベースに接続
+
 def connect_db():
-    return psycopg2.connect(**db_params)
+    return psycopg2.connect(os.environ['postgres://testlogin1_user:Jn6XymNvzVXg7LLJdnfZiUiexKWDX6yJ@dpg-clasa0eg1b2c73a7u38g-a/testlogin1'])
+
 
 # ユーザーデータベースの作成
 def create_user_table():
