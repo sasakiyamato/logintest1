@@ -4,14 +4,6 @@ import os
 
 app = Flask(__name__)
 
-# PostgreSQLの接続情報
-db_params = {
-     'host': 'dpg-clasa0eg1b2c73a7u38g-a.oregon-postgres.render.com',
-     'database': 'testlogin1',
-     'user': 'testlogin1_user',
-     'password': 'Jn6XymNvzVXg7LLJdnfZiUiexKWDX6yJ',
-}
-
 # データベースに接続
 
 def connect_db():
